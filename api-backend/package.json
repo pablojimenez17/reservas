@@ -1,0 +1,23 @@
+{
+  "name": "reservahub-api",
+  "version": "1.0.0",
+  "description": "API centralizada multitenante para gestión de reservas SaaS",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test"
+  },
+  "keywords": ["saas", "reservas", "multitenant", "booking", "express"],
+  "author": "ReservaHub",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.12.0"
+  }
+}

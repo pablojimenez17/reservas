@@ -1,0 +1,15 @@
+{
+  "name": "reservahub-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo de ReservaHub: API Backend centralizado + Plantilla Web Multitenant para negocios locales",
+  "scripts": {
+    "dev:backend": "npm --prefix api-backend run dev",
+    "dev:frontend": "npm --prefix web-template run dev",
+    "test:backend": "npm --prefix api-backend test",
+    "build:frontend": "npm --prefix web-template run build"
+  },
+  "keywords": ["saas", "reservas", "multitenant", "hub-and-spoke"],
+  "author": "ReservaHub",
+  "license": "MIT"
+}

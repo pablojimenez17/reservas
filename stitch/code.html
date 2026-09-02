@@ -1,0 +1,225 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.bg-grid-pattern{background-size:40px 40px;background-image:linear-gradient(to right,#e2e8f0 1px,transparent 1px),linear-gradient(to bottom,#e2e8f0 1px,transparent 1px);}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{"colors":{"primary":"#000000","surface-bright":"#fcf8fa","secondary":"#4648d4","tertiary":"#000000","surface-container-lowest":"#ffffff","surface-container-high":"#eae7e9","on-primary-fixed":"#131b2e","outline":"#76777d","secondary-fixed":"#e1e0ff","surface-variant":"#e4e2e4","tertiary-fixed-dim":"#4edea3","surface-container-low":"#f6f3f5","outline-variant":"#c6c6cd","inverse-on-surface":"#f3f0f2","on-surface-variant":"#45464d","on-secondary-fixed-variant":"#2f2ebe","surface-tint":"#565e74","on-tertiary-fixed":"#002113","tertiary-container":"#002113","on-primary":"#ffffff","primary-container":"#131b2e","surface":"#fcf8fa","secondary-container":"#6063ee","on-tertiary-container":"#009668","on-primary-fixed-variant":"#3f465c","background":"#fcf8fa","on-secondary-container":"#fffbff","primary-fixed":"#dae2fd","inverse-primary":"#bec6e0","surface-dim":"#dcd9db","on-tertiary":"#ffffff","error":"#ba1a1a","on-tertiary-fixed-variant":"#005236","primary-fixed-dim":"#bec6e0","on-primary-container":"#7c839b","surface-container-highest":"#e4e2e4","error-container":"#ffdad6","on-secondary":"#ffffff","secondary-fixed-dim":"#c0c1ff","on-secondary-fixed":"#07006c","on-error-container":"#93000a","on-error":"#ffffff","surface-container":"#f0edef","on-background":"#1b1b1d","inverse-surface":"#303032","tertiary-fixed":"#6ffbbe","on-surface":"#1b1b1d"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"md":"24px","xs":"8px","lg":"40px","base":"4px","sm":"16px","margin-desktop":"48px","gutter":"24px","xl":"64px","margin-mobile":"16px"},"fontFamily":{"headline-lg":["Geist"],"headline-md":["Geist"],"body-md":["Inter"],"display-lg":["Geist"],"label-mono":["JetBrains Mono"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-lg-mobile":["Geist"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-mono":["13px",{"lineHeight":"16px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"600"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-md"><img alt="Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV5oZUSx-RxT1ectaSKibagasi1RxH0f6HfUtyUWFovuDs1r2oPVdy2hq4Q3rXSKYtnHEsn9oBG8i5y2ZtPM-29KjdEJEV8MXcLwXz932SFjjmX-VBsmotbDdTqjYQce50PsAyQse8vxn5g3tmFPCozd_DBrJxXsbR97XJEO990k9Q2Y5o-44Bf6K1xwWZbJxE2Pwm3Hsk9cJc-5n4Hz0dkehgLFlm6xQ3H-P3P_BAXxs5Uz1lfENmSA"/><span class="font-headline-md text-headline-md tracking-tight text-primary">SYSCORP</span></div><nav class="hidden lg:flex items-center gap-lg" data-active-classes="text-secondary font-semibold"><a aria-current="page" class="uppercase transition-colors text-secondary font-semibold" data-path="propuesta" href="#">Propuesta</a><a class="font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="arquitectura" href="#">Arquitectura</a><a class="font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="modelo" href="#">Modelo</a><a class="font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-secondary transition-colors" data-path="escalabilidad" href="#">Escalabilidad</a></nav><div class="flex items-center gap-sm"><button class="hidden md:flex items-center px-md py-xs bg-primary text-on-primary font-label-mono text-label-mono uppercase rounded-lg hover:bg-on-primary-container transition-all">Solicitar Demo</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-grid-pattern"><div class="flex flex-col w-full text-on-surface">
+<!-- Hero Section -->
+<section class="relative pt-xl pb-margin-desktop px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="absolute inset-0 bg-surface -z-10"></div>
+<div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-md">
+<div class="inline-flex items-center gap-xs px-sm py-base rounded-full bg-surface-container-high border border-outline-variant text-label-mono font-label-mono uppercase">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+        v2.4.0 Released
+      </div>
+<h1 class="font-display-lg text-display-lg md:text-[64px] md:leading-[72px] text-primary tracking-tighter">
+        El Backend que usan todos, webs que parecen de cada uno.
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        Potencia tu red de clientes con una API centralizada y sitios web 100% personalizados. Escalabilidad multitenant real para ecosistemas B2B.
+      </p>
+<div class="flex flex-col sm:flex-row gap-sm mt-md">
+<button class="px-lg py-sm bg-secondary text-on-secondary font-label-mono text-label-mono uppercase rounded-lg hover:bg-secondary-container transition-all shadow-md">
+          Ver Documentación
+        </button>
+<button class="px-lg py-sm bg-transparent border border-outline-variant text-on-surface font-label-mono text-label-mono uppercase rounded-lg hover:bg-surface-container transition-all">
+          Calcular Margen
+        </button>
+</div>
+</div>
+</section>
+<!-- La Propuesta (Technical Diagram) -->
+<section class="py-margin-desktop px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-6xl mx-auto flex flex-col gap-xl">
+<div class="text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary">Te hago tu web custom + te doy acceso a mi API</h2>
+</div>
+<div class="relative bg-surface p-lg rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col md:flex-row items-center gap-xl justify-between">
+<!-- Central API -->
+<div class="relative z-10 bg-primary text-on-primary p-md rounded-lg w-full md:w-1/3 shadow-xl">
+<div class="flex items-center gap-xs mb-sm pb-base border-b border-on-primary/20">
+<span class="material-symbols-outlined text-[20px]">database</span>
+<span class="font-label-mono text-label-mono uppercase tracking-wider">API Backend Core</span>
+</div>
+<ul class="flex flex-col gap-xs font-label-mono text-[12px] text-on-primary/80">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">check_circle</span> PostgreSQL / Prisma</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">check_circle</span> Express / Node.js</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">check_circle</span> Docker Containerized</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">check_circle</span> JWT Auth Multitenant</li>
+</ul>
+</div>
+<!-- Connections (Visual) -->
+<div class="hidden md:flex flex-1 relative h-32 items-center justify-center opacity-40">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path class="text-primary" d="M 0,50 C 50,50 50,20 100,20" fill="none" stroke="currentColor" stroke-dasharray="4" stroke-width="1"></path>
+<path class="text-primary" d="M 0,50 C 50,50 50,50 100,50" fill="none" stroke="currentColor" stroke-dasharray="4" stroke-width="1"></path>
+<path class="text-primary" d="M 0,50 C 50,50 50,80 100,80" fill="none" stroke="currentColor" stroke-dasharray="4" stroke-width="1"></path>
+</svg>
+</div>
+<!-- Custom Domains -->
+<div class="relative z-10 flex flex-col gap-md w-full md:w-1/3">
+<div class="bg-surface-container-highest p-sm rounded-lg border border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 bg-[#f3f4f6] rounded flex items-center justify-center border border-outline-variant"><span class="font-label-mono text-[10px] text-primary">M</span></div>
+<span class="font-label-mono text-label-mono text-primary">marcos.es</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-secondary bg-secondary/10 px-xs py-base rounded">Tenant_01</span>
+</div>
+<div class="bg-surface-container-highest p-sm rounded-lg border border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 bg-[#1e293b] rounded flex items-center justify-center border border-outline-variant"><span class="font-label-mono text-[10px] text-on-primary">G</span></div>
+<span class="font-label-mono text-label-mono text-primary">garcia.es</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-secondary bg-secondary/10 px-xs py-base rounded">Tenant_02</span>
+</div>
+<div class="bg-surface-container-highest p-sm rounded-lg border border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 bg-[#ef4444] rounded flex items-center justify-center border border-outline-variant"><span class="font-label-mono text-[10px] text-on-primary">P</span></div>
+<span class="font-label-mono text-label-mono text-primary">pepe.es</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-secondary bg-secondary/10 px-xs py-base rounded">Tenant_03</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Modelo de Negocio -->
+<section class="py-margin-desktop px-margin-mobile md:px-margin-desktop">
+<div class="max-w-6xl mx-auto flex flex-col gap-xl">
+<div class="flex flex-col md:flex-row justify-between items-end gap-sm">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Modelo de Negocio</h2>
+<p class="font-body-md text-on-surface-variant mt-xs">Estructura de precios diseñada para maximizar el margen operativo.</p>
+</div>
+<div class="bg-tertiary-fixed-dim/20 text-on-tertiary-fixed-variant px-sm py-xs rounded-full border border-tertiary-fixed-dim font-label-mono text-label-mono uppercase flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> 91% Margen Recurrente
+        </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Lite Tier -->
+<div class="bg-surface-container p-lg rounded-xl border border-outline-variant flex flex-col gap-md">
+<div class="border-b border-outline-variant pb-sm">
+<h3 class="font-headline-md text-headline-md text-primary">Paquete Lite</h3>
+<p class="font-body-sm text-on-surface-variant">Setup rápido para clientes estándar.</p>
+</div>
+<div class="flex flex-col gap-xs">
+<div class="flex justify-between items-center font-label-mono text-body-md text-primary">
+<span>Web Template (Setup)</span>
+<span class="font-bold">999€</span>
+</div>
+<div class="flex justify-between items-center font-label-mono text-body-md text-secondary">
+<span>API Backend (Mensual)</span>
+<span class="font-bold">29€/mes</span>
+</div>
+</div>
+<ul class="flex flex-col gap-sm font-body-sm text-on-surface-variant mt-sm">
+<li class="flex items-start gap-xs"><span class="material-symbols-outlined text-[18px] text-primary">check</span> Misma estructura web base</li>
+<li class="flex items-start gap-xs"><span class="material-symbols-outlined text-[18px] text-primary">check</span> Cambios de color y logo</li>
+<li class="flex items-start gap-xs"><span class="material-symbols-outlined text-[18px] text-primary">check</span> Despliegue automatizado</li>
+</ul>
+</div>
+<!-- Premium Tier -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border-2 border-secondary relative shadow-lg flex flex-col gap-md">
+<div class="absolute -top-3 right-lg bg-secondary text-on-secondary px-sm py-base rounded-full font-label-mono text-[10px] uppercase tracking-wide">
+             Recomendado
+           </div>
+<div class="border-b border-outline-variant pb-sm">
+<h3 class="font-headline-md text-headline-md text-primary">Paquete Premium</h3>
+<p class="font-body-sm text-on-surface-variant">Solución a medida para clientes enterprise.</p>
+</div>
+<div class="flex flex-col gap-xs">
+<div class="flex justify-between items-center font-label-mono text-body-md text-primary">
+<span>Web Custom (Setup)</span>
+<span class="font-bold">5.000€</span>
+</div>
+<div class="flex justify-between items-center font-label-mono text-body-md text-secondary">
+<span>API Backend (Mensual)</span>
+<span class="font-bold">29€/mes</span>
+</div>
+</div>
+<ul class="flex flex-col gap-sm font-body-sm text-on-surface-variant mt-sm">
+<li class="flex items-start gap-xs"><span class="material-symbols-outlined text-[18px] text-primary">check</span> Arquitectura Next.js personalizada</li>
+<li class="flex items-start gap-xs"><span class="material-symbols-outlined text-[18px] text-primary">check</span> Diseño UI/UX único desde cero</li>
+<li class="flex items-start gap-xs"><span class="material-symbols-outlined text-[18px] text-primary">check</span> Hosting Vercel Edge Network</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Arquitectura & Código -->
+<section class="py-margin-desktop px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-xl items-center">
+<div class="flex-1 flex flex-col gap-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Infraestructura Segregada por Tenant</h2>
+<p class="font-body-lg text-on-surface-variant">
+          El núcleo del sistema aísla los datos mediante un identificador único por cliente, permitiendo usar una única base de datos garantizando privacidad total.
+        </p>
+</div>
+<div class="flex-1 w-full flex flex-col gap-sm">
+<!-- Code Block 1 -->
+<div class="bg-primary rounded-xl overflow-hidden shadow-md">
+<div class="flex items-center justify-between px-sm py-xs bg-primary-container/50 border-b border-outline/20">
+<span class="font-label-mono text-[11px] text-on-primary/60 uppercase">middleware/auth.ts</span>
+<span class="material-symbols-outlined text-[16px] text-on-primary/60 cursor-pointer hover:text-on-primary">content_copy</span>
+</div>
+<pre class="p-sm overflow-x-auto text-[13px] font-label-mono leading-relaxed"><code class="text-on-primary">
+<span class="text-secondary-fixed">export const</span> validateTenant = (req, res, next) => {
+  <span class="text-secondary-fixed">const</span> tenantId = req.headers[<span class="text-tertiary-fixed-dim">'x-tenant-id'</span>];
+  
+  <span class="text-secondary-fixed">if</span> (!tenantId) {
+    <span class="text-secondary-fixed">return</span> res.status(<span class="text-tertiary-fixed-dim">400</span>).json({ 
+      error: <span class="text-tertiary-fixed-dim">'Tenant ID is required'</span> 
+    });
+  }
+  
+  req.tenantId = tenantId;
+  next();
+};
+          </code></pre>
+</div>
+<!-- Code Block 2 -->
+<div class="bg-primary rounded-xl overflow-hidden shadow-md">
+<div class="flex items-center justify-between px-sm py-xs bg-primary-container/50 border-b border-outline/20">
+<span class="font-label-mono text-[11px] text-on-primary/60 uppercase">client/api.ts</span>
+</div>
+<pre class="p-sm overflow-x-auto text-[13px] font-label-mono leading-relaxed"><code class="text-on-primary">
+apiClient.interceptors.request.use((config) => {
+  <span class="text-outline-variant">// Inyecta automáticamente el ID del cliente</span>
+  <span class="text-outline-variant">// en todas las peticiones desde el frontend</span>
+  config.headers[<span class="text-tertiary-fixed-dim">'x-tenant-id'</span>] = process.env.NEXT_PUBLIC_TENANT_ID;
+  <span class="text-secondary-fixed">return</span> config;
+});
+          </code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Escalabilidad -->
+<section class="py-margin-desktop px-margin-mobile md:px-margin-desktop">
+<div class="max-w-6xl mx-auto flex flex-col gap-lg">
+<div class="text-center max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary">Crecimiento sin límites técnicos</h2>
+<p class="font-body-md text-on-surface-variant mt-sm">Mantén una única base de código mientras escalas tu cartera de clientes.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md mt-md">
+<div class="bg-surface-container-highest p-md rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-sm">api</span>
+<h4 class="font-label-mono text-label-mono uppercase text-primary mb-xs">1 API Backend</h4>
+<p class="font-body-sm text-on-surface-variant">Mantenimiento centralizado. Actualizas el core, todos los clientes se benefician instantáneamente.</p>
+</div>
+<div class="bg-surface-container-highest p-md rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-sm">devices</span>
+<h4 class="font-label-mono text-label-mono uppercase text-primary mb-xs">N Webs Custom</h4>
+<p class="font-body-sm text-on-surface-variant">Frontends desacoplados. Libertad total creativa para cada cliente sin comprometer el backend.</p>
+</div>
+<div class="bg-surface-container-highest p-md rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-sm">database</span>
+<h4 class="font-label-mono text-label-mono uppercase text-primary mb-xs">1 DB Central</h4>
+<p class="font-body-sm text-on-surface-variant">PostgreSQL optimizado. Costes de infraestructura reducidos al compartir recursos eficientemente.</p>
+</div>
+<div class="bg-surface-container-highest p-md rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-sm">security</span>
+<h4 class="font-label-mono text-label-mono uppercase text-primary mb-xs">Tenant Segregation</h4>
+<p class="font-body-sm text-on-surface-variant">Seguridad robusta a nivel de aplicación (RLS) asegurando que los datos nunca se crucen.</p>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container text-on-surface-variant pt-xl pb-md px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-4 gap-xl mb-lg"><div class="col-span-1 md:col-span-1 flex flex-col gap-sm"><img alt="Logo" class="h-8 w-fit object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV5oZUSx-RxT1ectaSKibagasi1RxH0f6HfUtyUWFovuDs1r2oPVdy2hq4Q3rXSKYtnHEsn9oBG8i5y2ZtPM-29KjdEJEV8MXcLwXz932SFjjmX-VBsmotbDdTqjYQce50PsAyQse8vxn5g3tmFPCozd_DBrJxXsbR97XJEO990k9Q2Y5o-44Bf6K1xwWZbJxE2Pwm3Hsk9cJc-5n4Hz0dkehgLFlm6xQ3H-P3P_BAXxs5Uz1lfENmSA"/><p class="font-body-sm text-body-sm max-w-xs">Infraestructura de alto rendimiento para ecosistemas B2B escalables y seguros.</p><div class="flex gap-sm mt-base"><span class="material-symbols-outlined cursor-pointer hover:text-secondary">terminal</span><span class="material-symbols-outlined cursor-pointer hover:text-secondary">data_thresholding</span><span class="material-symbols-outlined cursor-pointer hover:text-secondary">security</span></div></div><div class="flex flex-col gap-sm"><h4 class="font-label-mono text-label-mono uppercase text-on-surface font-bold">Recursos</h4><a class="font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Documentación</a><a class="font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">API Status</a><a class="font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Open Source</a></div><div class="flex flex-col gap-sm"><h4 class="font-label-mono text-label-mono uppercase text-on-surface font-bold">Compañía</h4><a class="font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Sobre Nosotros</a><a class="font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Seguridad</a><a class="font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Contacto</a></div><div class="flex flex-col gap-sm"><h4 class="font-label-mono text-label-mono uppercase text-on-surface font-bold">Newsletter</h4><div class="flex gap-base"><input class="bg-surface-container-low border border-outline-variant px-sm py-xs rounded-lg text-body-sm w-full focus:outline-none focus:border-secondary" placeholder="developer@company.com" type="email"/><button class="bg-secondary text-on-secondary px-sm py-xs rounded-lg font-label-mono text-label-mono">JOIN</button></div></div></div><div class="border-t border-outline-variant pt-md flex flex-col md:flex-row justify-between items-center gap-sm"><span class="font-label-mono text-label-mono uppercase opacity-70">© 2024 SYSCORP INFRASTRUCTURE LTD.</span><div class="flex gap-md font-label-mono text-label-mono uppercase opacity-70"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Legal</a></div></div></footer></body></html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Web Existente (Ejemplo WordPress / Webflow)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #111827;
+      color: #f3f4f6;
+      line-height: 1.6;
+    }
+    header {
+      background: #1f2937;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #374151;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #9ca3af;
+      margin-bottom: 2rem;
+    }
+    .cta-btn {
+      background: #f59e0b;
+      color: #111827;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 1rem 2.5rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+      transition: all 0.2s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+    }
+    .card {
+      background: #1f2937;
+      border: 1px solid #374151;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem auto;
+      max-width: 700px;
+      text-align: left;
+    }
+    code {
+      background: #000;
+      color: #38bdf8;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>💈 Web Existente del Negocio</h2>
+    <!-- Este botón abre el modal de ReservaHub mediante el atributo data-reservahub="open" -->
+    <button class="cta-btn" data-reservahub="open">Pedir Cita Online</button>
+  </header>
+
+  <div class="hero">
+    <h1>Esta es una web que el cliente ya tenía hecha</h1>
+    <p>
+      Puede ser una web hecha en WordPress, Webflow, Shopify, Wix o HTML puro. 
+      No hace falta rehacer su web para venderle el SaaS de reservas.
+    </p>
+
+    <!-- Botón con disparador -->
+    <button class="cta-btn" data-reservahub="open">
+      📅 Probar Reserva en Popup
+    </button>
+
+    <div class="card">
+      <h3>¿Cómo se ha integrado ReservaHub aquí?</h3>
+      <p>Solo se ha añadido esta línea de código al final del HTML de esta web:</p>
+      <pre style="background: #000; padding: 1rem; border-radius: 8px; overflow-x: auto; color: #38bdf8;">
+&lt;script src="http://localhost:5000/widget.js" data-tenant="marcos"&gt;&lt;/script&gt;
+      </pre>
+      <p>
+        Y a cualquier botón existente se le añade el atributo <code>data-reservahub="open"</code>.
+        El widget inyecta automáticamente el popup flotante y gestiona la disponibilidad en tiempo real conectándose a tu API.
+      </p>
+    </div>
+  </div>
+
+  <!-- SCRIPT UNIVERSAL DE RESERVAHUB (Conecta con la API centralizada del SaaS) -->
+  <script src="http://localhost:5000/widget.js" data-tenant="marcos"></script>
+
+</body>
+</html>
