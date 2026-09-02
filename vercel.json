@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd web-template && npm install && npm run build",
+  "outputDirectory": "web-template/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
