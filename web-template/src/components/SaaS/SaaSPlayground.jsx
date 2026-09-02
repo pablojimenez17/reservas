@@ -64,6 +64,7 @@ const horarioRestaurante = {
 const negociosDemo = {
   barberia: {
     nombre: 'Barbería Moderna',
+    etiquetaCorta: 'Barbería',
     tipo: 'citas',
     icono: Scissors,
     profesionales: [
@@ -96,6 +97,7 @@ const negociosDemo = {
   },
   fisioterapia: {
     nombre: 'Clínica & Fisio Salud',
+    etiquetaCorta: 'Clínica & Fisio',
     tipo: 'citas',
     icono: Stethoscope,
     profesionales: [
@@ -125,6 +127,7 @@ const negociosDemo = {
   },
   estetica: {
     nombre: 'Centro Belleza & Uñas Glow',
+    etiquetaCorta: 'Centro Belleza',
     tipo: 'citas',
     icono: Sparkle,
     profesionales: [
@@ -154,6 +157,7 @@ const negociosDemo = {
   },
   restaurante: {
     nombre: 'Restaurante Asador & Brasa El Olivo',
+    etiquetaCorta: 'Restaurante Asador',
     tipo: 'restaurante',
     icono: Utensils,
     mesasConfigInicial: [
@@ -467,7 +471,7 @@ export const SaaSPlayground = () => {
         </div>
 
         {/* SELECTOR DE 4 VERTICALES */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.75rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '0.45rem', marginBottom: '1.5rem', maxWidth: '820px', margin: '0 auto 1.5rem' }}>
           {Object.entries(negociosDemo).map(([clave, datos]) => {
             const isSelected = verticalActiva === clave;
             const Icono = datos.icono;
@@ -477,23 +481,25 @@ export const SaaSPlayground = () => {
                 key={clave}
                 onClick={() => handleCambiarVertical(clave)}
                 style={{
-                  padding: '0.6rem 1.25rem',
+                  padding: '0.6rem 0.75rem',
                   borderRadius: '6px',
                   background: isSelected ? 'var(--primary)' : 'var(--surface-container-lowest)',
                   color: isSelected ? 'var(--on-primary)' : 'var(--on-surface-variant)',
                   border: `1px solid ${isSelected ? 'var(--primary)' : 'var(--outline-variant)'}`,
                   fontFamily: 'var(--font-mono)',
-                  fontSize: '12px',
+                  fontSize: '11px',
                   textTransform: 'uppercase',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '0.5rem',
-                  transition: 'all 0.15s ease'
+                  justifyContent: 'center',
+                  gap: '0.4rem',
+                  transition: 'all 0.15s ease',
+                  textAlign: 'center'
                 }}
               >
-                <Icono size={15} /> {datos.nombre.split(' ')[0]} {datos.nombre.split(' ')[1]}
+                <Icono size={14} /> {datos.etiquetaCorta || datos.nombre}
               </button>
             );
           })}
@@ -501,7 +507,7 @@ export const SaaSPlayground = () => {
           <button
             onClick={() => handleCambiarVertical(verticalActiva)}
             className="btn-stitch-outline"
-            style={{ padding: '0.6rem 1rem', fontSize: '11px' }}
+            style={{ padding: '0.6rem 0.75rem', fontSize: '11px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem' }}
             title="Reiniciar datos de muestra"
           >
             <RotateCcw size={13} /> Resetear
@@ -520,94 +526,94 @@ export const SaaSPlayground = () => {
           {/* Barra de Título */}
           <div style={{
             background: 'var(--surface-container-high)',
-            padding: '0.85rem 1.5rem',
+            padding: '0.65rem 0.85rem',
             borderBottom: '1px solid var(--outline-variant)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
-            gap: '1rem'
+            gap: '0.5rem'
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-              <div style={{ display: 'flex', gap: '5px' }}>
-                <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#c6c6cd' }} />
-                <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#c6c6cd' }} />
-                <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#c6c6cd' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <div style={{ display: 'flex', gap: '4px' }}>
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#c6c6cd' }} />
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#c6c6cd' }} />
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#c6c6cd' }} />
               </div>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', fontWeight: 700, color: 'var(--primary)', textTransform: 'uppercase' }}>
-                TuCita.io · {negocioActual.nombre}
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase' }}>
+                TuCita.io · {negocioActual.etiquetaCorta || negocioActual.nombre}
               </span>
             </div>
 
-            {/* CONMUTADOR DE 3 MODOS */}
-            <div style={{ display: 'flex', background: 'var(--surface-container-highest)', padding: '3px', borderRadius: '6px', border: '1px solid var(--outline-variant)', flexWrap: 'wrap', gap: '2px' }}>
+            {/* CONMUTADOR DE 3 MODOS EN MOBILE-FIRST */}
+            <div style={{ display: 'flex', background: 'var(--surface-container-highest)', padding: '2px', borderRadius: '6px', border: '1px solid var(--outline-variant)', width: 'auto', flexWrap: 'wrap', gap: '2px' }}>
               <button
                 onClick={() => setModoVista('cliente')}
                 style={{
-                  padding: '0.4rem 0.8rem',
+                  padding: '0.35rem 0.6rem',
                   borderRadius: '4px',
                   border: 'none',
                   background: modoVista === 'cliente' ? 'var(--secondary)' : 'transparent',
                   color: modoVista === 'cliente' ? '#fff' : 'var(--on-surface-variant)',
                   fontFamily: 'var(--font-mono)',
-                  fontSize: '11px',
+                  fontSize: '10.5px',
                   textTransform: 'uppercase',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '0.35rem'
+                  gap: '0.25rem'
                 }}
               >
-                <User size={13} /> 1. Cliente ({esRestaurante ? 'Mesa' : 'Cita'})
+                <User size={12} /> 1. Cliente
               </button>
 
               <button
                 onClick={() => setModoVista('agenda')}
                 style={{
-                  padding: '0.4rem 0.8rem',
+                  padding: '0.35rem 0.6rem',
                   borderRadius: '4px',
                   border: 'none',
                   background: modoVista === 'agenda' ? 'var(--secondary)' : 'transparent',
                   color: modoVista === 'agenda' ? '#fff' : 'var(--on-surface-variant)',
                   fontFamily: 'var(--font-mono)',
-                  fontSize: '11px',
+                  fontSize: '10.5px',
                   textTransform: 'uppercase',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '0.35rem'
+                  gap: '0.25rem'
                 }}
               >
-                <Calendar size={13} /> 2. {esRestaurante ? 'Sala y Mesas' : 'Agenda'} ({reservasSandbox.length})
+                <Calendar size={12} /> 2. {esRestaurante ? 'Mesas' : 'Agenda'} ({reservasSandbox.length})
               </button>
 
               <button
                 onClick={() => setModoVista('propietario')}
                 style={{
-                  padding: '0.4rem 0.8rem',
+                  padding: '0.35rem 0.6rem',
                   borderRadius: '4px',
                   border: 'none',
                   background: modoVista === 'propietario' ? 'var(--secondary)' : 'transparent',
                   color: modoVista === 'propietario' ? '#fff' : 'var(--on-surface-variant)',
                   fontFamily: 'var(--font-mono)',
-                  fontSize: '11px',
+                  fontSize: '10.5px',
                   textTransform: 'uppercase',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '0.35rem'
+                  gap: '0.25rem'
                 }}
               >
-                <Settings size={13} /> 3. Panel Propietario (Ajustes)
+                <Settings size={12} /> 3. Ajustes
               </button>
             </div>
           </div>
 
           {/* CUERPO DEL PLAYGROUND */}
-          <div style={{ padding: '2rem' }}>
+          <div style={{ padding: 'clamp(0.85rem, 3vw, 1.75rem)' }}>
             
             {/* 1. PANTALLA CLIENTE */}
             {modoVista === 'cliente' && (
@@ -818,7 +824,7 @@ export const SaaSPlayground = () => {
                     </div>
 
                     {/* PASO 4: DATOS */}
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem', marginBottom: '1rem' }}>
                       <div>
                         <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.25rem' }}>
                           Nombre *
@@ -1334,7 +1340,7 @@ export const SaaSPlayground = () => {
                     </span>
                   </div>
 
-                  <div style={{ display: 'flex', gap: '0.35rem', overflowX: 'auto', marginBottom: '1.25rem' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(75px, 1fr))', gap: '0.35rem', marginBottom: '1.25rem' }}>
                     {Object.entries(nombresDiasCompletos).map(([clave, nombre]) => {
                       const isSel = diaParaEditarHorario === clave;
                       const horas = horariosPorDia[clave] || [];
@@ -1344,7 +1350,7 @@ export const SaaSPlayground = () => {
                           type="button"
                           onClick={() => setDiaParaEditarHorario(clave)}
                           style={{
-                            padding: '0.45rem 0.75rem',
+                            padding: '0.45rem 0.25rem',
                             borderRadius: '6px',
                             border: `1.5px solid ${isSel ? 'var(--secondary)' : 'var(--outline-variant)'}`,
                             background: isSel ? 'var(--secondary)' : 'var(--surface-container-lowest)',
@@ -1356,7 +1362,7 @@ export const SaaSPlayground = () => {
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
-                            minWidth: '85px'
+                            textAlign: 'center'
                           }}
                         >
                           <span>{nombre}</span>
@@ -1386,7 +1392,7 @@ export const SaaSPlayground = () => {
                         </span>
                       </div>
 
-                      <div style={{ display: 'flex', gap: '0.35rem' }}>
+                      <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
                         <button
                           type="button"
                           onClick={() => handleCargarHorarioMananaTarde(diaParaEditarHorario)}

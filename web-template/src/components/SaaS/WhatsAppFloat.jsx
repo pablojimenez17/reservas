@@ -10,12 +10,13 @@ export const WhatsAppFloat = () => {
     <div
       style={{
         position: 'fixed',
-        bottom: '24px',
-        right: '24px',
+        bottom: '16px',
+        right: '16px',
         zIndex: 9999,
         display: 'flex',
         alignItems: 'center',
-        gap: '0.5rem',
+        gap: '0.4rem',
+        maxWidth: 'calc(100vw - 32px)',
         animation: 'fadeIn 0.3s ease'
       }}
     >
